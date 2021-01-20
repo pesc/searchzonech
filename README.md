@@ -4,7 +4,30 @@ Search the .ch zone file for DNS Records: https://searchzone.ch/
 
 ## Infrastructure
 It's an elastic-based search engine ([AppSearch](https://www.elastic.co/app-search/) & [Elasticsearch](https://www.elastic.co/elasticsearch/)) running on Docker in the [Hetzner Cloud](https://www.hetzner.com/cloud).
-
+```
+                                         +---------------------------------------------+                            
+                                         |      Elastic & EnterpriseSearch Cluster     |                            
+                                         |                                             |                            
+                                         | +---------------------+                     |                            
+                                         | |                     |                     |                            
++------------------------+               | |searchzone-elastic-01|                     |                            
+|      Loadbalancer      |---------------| |                     |                     |                            
+|                        |               | +---------------------+                     |                            
+|                        |               | +---------------------+                     |                            
+|    api.searchzone.ch   |---------------| |                     |                     |                            
+|                        |               | |searchzone-elastic-02|                     |                            
+|                        |               | |                     |                     |                            
+|                        |               | +---------------------+                     |                            
+|                        |---------------| +---------------------+                     |                            
++------------------------+               | |                     |                     |                            
+                                         | |searchzone-elastic-03|                     |                            
+                                         | |                     |                     |                            
+                                         | +---------------------+                     |                            
+                                         |                                             |                            
+                                         |                                             |                            
+                                         |                                             |                            
+                                         +---------------------------------------------+       
+```
 ### Updates and Deletion
 The newly added domains get indexed once a day. The deleted ones I only mark as removed (`VALID_DOMAIN = False`). So maybe you'll find a nice domain you wanted to buy with this flag.
 
