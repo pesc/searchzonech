@@ -37,7 +37,7 @@ The data I use is public available from [Switch.ch](https://www.switch.ch/de/ope
 ## Next steps
 1. Release source code for indexing (Python)
 2. ~~Release source code for React App~~
-3. Make Elastic more robust and faster
+3. ~~Make Elastic more robust and faster~~
 4. Design, Design, Design,...
 5. Open API
 6. Open for changes (Some ideas: Better DNSSEC Overview, Notification for a deleted domain, ...)
