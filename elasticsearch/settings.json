@@ -1,5 +1,5 @@
 {
-    ".ent-search-engine-5ffe3253491aefe627a986b8": {
+    ".ent-search-engine-600709c4c66577a6a13ca942": {
         "settings": {
             "index": {
                 "max_ngram_diff": "15",
@@ -8,7 +8,7 @@
                         "limit": "99999999"
                     }
                 },
-                "refresh_interval": "180s",
+                "refresh_interval": "300s",
                 "indexing": {
                     "slowlog": {
                         "threshold": {
@@ -21,9 +21,8 @@
                         }
                     }
                 },
-                "auto_expand_replicas": "0-1",
-                "provided_name": ".ent-search-engine-5ffe3253491aefe627a986b8",
-                "creation_date": "1610546180687",
+                "provided_name": ".ent-search-engine-600709c4c66577a6a13ca942",
+                "creation_date": "1611219073317",
                 "analysis": {
                     "filter": {
                         "front_ngram": {
@@ -221,11 +220,10 @@
                     }
                 },
                 "priority": "150",
-                "number_of_replicas": "0",
-                "uuid": "zUC3LZylRWSUYk-5xpRsOA",
+                "number_of_replicas": "1",
+                "uuid": "UQxO5lliRlmwq75H00t62w",
                 "version": {
-                    "created": "7100199",
-                    "upgraded": "7100299"
+                    "created": "7100299"
                 },
                 "routing": {
                     "allocation": {
@@ -253,7 +251,7 @@
                         }
                     }
                 },
-                "number_of_shards": "2",
+                "number_of_shards": "6",
                 "similarity": {
                     "default": {
                         "type": "BM25"
