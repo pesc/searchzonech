@@ -8,7 +8,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
 import {
   ErrorBoundary,
   Facet,
@@ -135,6 +134,8 @@ function Home() {
         <span><a href="/useapi.html">API</a></span>
         <span> | </span>
         <span><a href="https://github.com/pesc/.ch-searchzone">Github</a></span>
+        <span> | </span>
+        <span><a href="https://www.buymeacoffee.com/pesc"><span role="img" aria-label="beer">🍺</span><span role="img" aria-label="love">❤️</span></a></span>
       </Footer>
     </SearchProvider>
   );

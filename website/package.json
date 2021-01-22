@@ -10,7 +10,6 @@
     "react": "^16.8.1",
     "react-cookie-consent": "^6.2.1",
     "react-dom": "^16.8.1",
-    "react-ga": "^3.3.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
     "react-spinners": "^0.10.4"
