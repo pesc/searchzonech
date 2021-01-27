@@ -1,0 +1,5 @@
+dnspython~=2.0.0
+idna~=2.10
+requests~=2.25.1
+PyYAML~=5.4.1
+elastic-enterprise-search>=7.10.0b1
