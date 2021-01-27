@@ -84,7 +84,9 @@ function Home() {
             <div className="App">   
               <ErrorBoundary>
                 <Layout
-                  header={<SearchBox autocompleteSuggestions={true} searchAsYouType={false} autocompleteMinimumCharacters={3} />}
+                  header={
+                  <SearchBox autocompleteSuggestions={true} searchAsYouType={false} autocompleteMinimumCharacters={3} />
+                  }
                   sideContent={
                     <div>
                       {!isLoading && wasSearched && (
@@ -144,6 +146,7 @@ function Home() {
 function API() {
   return <h2>API</h2>
 }
+
 
 function About() {
   return <h2>About</h2>
