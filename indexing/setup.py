@@ -9,9 +9,9 @@ setup(
     author='Pascal Christen',
     author_email='pascal@pascalchristen.ch',
     description='.ch Searchzone Indexer',
-    entry_points = {
-    'console_scripts': [
-        'searchzoni = searchzone.cli:main',
-    ],
+    entry_points={
+        'console_scripts': [
+            'searchzoni = searchzone.cli:main',
+        ],
     }
 )

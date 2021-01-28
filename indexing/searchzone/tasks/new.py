@@ -13,7 +13,6 @@ def new(appsearch, queue):
         queue.task_done()
 
 
-
 def new_adding(appsearch, domain):
     answer = {}
     rr_list = ['A', 'AAAA', 'NS', 'TXT', 'MX', 'DS', 'DNSKEY']

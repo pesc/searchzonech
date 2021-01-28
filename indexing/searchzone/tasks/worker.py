@@ -25,12 +25,12 @@ class Worker:
         LOGGER.debug('Performing requests on: %s engine: %s with file: %s', self.url, self.engine, self.file)
 
     def update(self):
-        #ToDo: Fix problem with overwriting info_mail
+        # ToDo: Fix problem with overwriting info_mail
         for _ in range(10):
             threading.Thread(target=new, args=[self.appsearch, self.domain_queue], daemon=True).start()
         self.domain_queue.join()
         for i in range(2500):
-            LOGGER.info('Starting updating 1000 users from %d to %d', (i*1000-1000), i*1000)
+            LOGGER.info('Starting updating 1000 users to %d', i * 1000)
             outdated(self.appsearch, self.domain_queue)
             LOGGER.info('Sleeping for 300 seconds to let elastic and threads do their job')
             sleep(300)
