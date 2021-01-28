@@ -2,7 +2,7 @@
 
 # dependencies
 /certs
-
+/docker
 # misc
 .DS_Store
 .env.local

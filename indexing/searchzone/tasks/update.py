@@ -1,5 +1,5 @@
 import logging
-from datetime import datetime, timezone, timedelta
+from datetime import timedelta
 
 from searchzone.tasks.helper import timestamp_now
 
@@ -7,8 +7,8 @@ LOGGER = logging.getLogger(__name__)
 
 
 def outdated(appsearch, queue):
-    local_time = datetime.now(timezone.utc).astimezone()
-    outdated_time = local_time - timedelta(days=3)
+    local_time = timestamp_now()
+    outdated_time = local_time - timedelta(days=5)
     body = {
         "query": "true",
         "search_fields": {

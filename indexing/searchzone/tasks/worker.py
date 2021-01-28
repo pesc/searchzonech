@@ -25,6 +25,7 @@ class Worker:
         LOGGER.debug('Performing requests on: %s engine: %s with file: %s', self.url, self.engine, self.file)
 
     def update(self):
+        #ToDo: Fix problem with overwriting info_mail
         for _ in range(10):
             threading.Thread(target=new, args=[self.appsearch, self.domain_queue], daemon=True).start()
         self.domain_queue.join()
