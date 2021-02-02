@@ -32,7 +32,11 @@ def outdated(appsearch, queue):
             }
         }
     }
-    results = appsearch.search_document(body)
-    for result in results['results']:
-        for value in result['id'].values():
-            queue.put(value)
+    try:
+        results = appsearch.search_document(body)
+        for result in results['results']:
+            for value in result['id'].values():
+                queue.put(value)
+    except:
+        LOGGER.critical("Something went wrong, retrying")
+        pass
