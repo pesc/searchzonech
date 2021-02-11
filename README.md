@@ -3,6 +3,7 @@
 > A configurable, generic search UI for
 > any [Elastic App Search](https://www.elastic.co/products/app-search) Engine.
 
+
 ## Getting started 🐣
 
 ```bash
