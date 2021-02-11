@@ -3,7 +3,7 @@ name: Development workflow
 on:
   push:
     branches:
-      - dev
+      - ng
 
 jobs:
   deploy:
