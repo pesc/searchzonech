@@ -10,9 +10,14 @@ export default function ({
 }) {
 
     return (
+        <>
+        { searchTerm && (
+            
         <Breadcrumbs aria-label="breadcrumb">
             <Typography color="textPrimary">{"Results for " + searchTerm}</Typography>
             <Typography color="textPrimary">{"Showing " + end + " out of " + totalResults}</Typography>
         </Breadcrumbs>
+        )}
+        </>
     );
 }

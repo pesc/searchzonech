@@ -14,7 +14,13 @@
   ],
   "sortFields": [
     "a",
-    "mx"
+    "aaaa",
+    "domain",
+    "mx",
+    "ns",
+    "valid_info",
+    "valid_domain",
+    "timestamp"
   ],
   "facets": [
     "a",
@@ -33,6 +39,5 @@
     "domain"
   ],
   "titleField": "domain",
-  "urlField": "",
-  "debug": true
+  "urlField": ""
 }

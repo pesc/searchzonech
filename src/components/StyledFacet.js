@@ -18,7 +18,7 @@ const StyledCard = withStyles({
     root: {
         marginBottom: '10px',
         paddingBottom: '5px',
-        width: '90%',
+        width: '100%',
     },
 })(Card);
 

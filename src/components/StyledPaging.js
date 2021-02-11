@@ -18,10 +18,11 @@ import Pagination from '@material-ui/lab/Pagination';
 // }
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        '& > *': {
-            marginTop: theme.spacing(2),
-        },
+    pagination: {
+        justifyContent: "center",
+        flexGrow: 1,
+        padding: theme.spacing(2),
+        textAlign: 'center',
     },
 }));
 function PagingView({
@@ -32,18 +33,12 @@ function PagingView({
     totalPages,
     ...rest
 }) {
-     const [page, setPage] = React.useState(1);
-    // const handleChange = (event, value) => {
-    //     setPage(value);
-    // };
-    console.log({onChange})
-    console.log({current})
-    console.log({ page })
-    console.log({ totalPages })
+    const [page, setPage] = React.useState(1);
     current = page
+    const classes = useStyles();
     return (
-        <Pagination page={page} current={page} count={totalPages} onChange={onChange} color="primary">
-        {/* <RCPagination
+        <Pagination className={classes.pagination} page={page} current={page} count={totalPages} onChange={onChange} color="primary">
+            {/* <RCPagination
             //current={page}
             //onChange={onChange}
             onChange={onChange}

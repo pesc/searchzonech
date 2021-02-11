@@ -20,7 +20,6 @@ export default function SortView({
     const selectedOption = selectedValue
         ? options.find(option => option.value === selectedValue)
         : null;
-    console.log(selectedOption)
     return (
         <FormControl style={{ display: 'flex', justifyContent: 'flex-end' }} >
             <InputLabel htmlFor="age-native-simple">{label}</InputLabel>

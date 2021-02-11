@@ -3,7 +3,7 @@ import AppSearchAPIConnector from "@elastic/search-ui-app-search-connector";
 import { makeStyles } from '@material-ui/core/styles';
 import SearchBoxMaterial from "../components/StyledSearchBoxMaterial"
 import ResultView from "../components/StyledResult"
-//import PagingView from "../components/PagingView"
+import PagingView from "../components/StyledPaging"
 import FacetView from "../components/StyledFacet"
 import SortView from "../components/StyledSort"
 //import { Paging as PagingView } from "@elastic/react-search-ui-views";
@@ -12,16 +12,16 @@ import {
     ErrorBoundary,
     Facet,
     SearchProvider,
-    //SearchBox,
+    SearchBox,
     Results,
     PagingInfo,
     //ResultsPerPage,
-    //Paging,
+    Paging,
     Sorting,
     WithSearch
 } from "@elastic/react-search-ui";
 import CssBaseline from '@material-ui/core/CssBaseline';
-//  import "@elastic/react-search-ui-views/lib/styles/styles.css";
+//import "@elastic/react-search-ui-views/lib/styles/styles.css";
 import {
     buildAutocompleteQueryConfig,
     buildFacetConfigFromConfig,
@@ -108,8 +108,29 @@ export default function Home() {
                                     </Grid> */}
                                     <Grid container spacing={2}>
                                         <Grid item xs={12} sm={12}>
-                                            {/* //<SearchBox autocompleteSuggestions={true} searchAsYouType={false} autocompleteMinimumCharacters={3} />
-                                            //<CustomizedInputBase></CustomizedInputBase>
+                                            {/* <SearchBox autocompleteSuggestions={true} searchAsYouType={false} autocompleteMinimumCharacters={3} /> */}
+                                            {/* <Box display="flex" className={classes.box}>
+                                                <Paper className={classes.paper}>
+                                                    <FormControl style={{ minWidth: "100%", width: "100%" }}>
+                                                        <SearchBox style={{ minWidth: "100%", width: "100%" }}
+                                                            inputView={({ getInputProps, getButtonProps }) => (
+                                                                <>
+                                                                    <InputBase className={classes.input} style={{ minWidth: "100%", width: "100%", marginLeft: "10px", }} autoFocus {...getInputProps({ placeholder: 'Search .ch zonefile' })}
+                                                                        endAdornment={
+                                                                            <InputAdornment position="end">
+                                                                                <IconButton {...getButtonProps()} type="submit" className={classes.iconButton} aria-label="search" >
+                                                                                    <SearchIcon />
+                                                                                </IconButton>
+                                                                            </InputAdornment>}
+                                                                    />
+
+                                                                </>
+                                                            )}
+                                                        />
+                                                    </FormControl>
+                                                </Paper>
+                                            </Box> */}
+                                            {/* //<CustomizedInputBase></CustomizedInputBase>
 
                                             // <SearchBox 
                                             //     autocompleteSuggestions={true}
@@ -207,17 +228,16 @@ export default function Home() {
                                             </React.Fragment>
                                         </Grid> */}
                                         <Grid item xs={12} sm={12} md={4} lg={4} xl={3}>
-                                            {searchTerm && wasSearched && (
+                                            <>
                                                 <PagingInfo style={{ display: 'flex', justifyContent: 'flex-end' }} view={StyledPagingInfo} />
-                                                /*{ <Sorting view={SortView}
+                                                <Sorting view={SortView}
                                                     label={"Sort by"}
                                                     sortOptions={buildSortOptionsFromConfig()}
-                                                /> }*/
-
-                                            )}
-                                            {getFacetFields().map(field => (
-                                                <Facet key={field} view={FacetView} field={field} label={field} isFilterable={true} />
-                                            ))}
+                                                />
+                                                {getFacetFields().map(field => (
+                                                    <Facet key={field} view={FacetView} field={field} label={field} isFilterable={true} />
+                                                ))}
+                                            </>
 
                                         </Grid>
                                         <Grid item md={1} lg={1} xl={1}>
@@ -231,7 +251,7 @@ export default function Home() {
                                             </>
                                         </Grid>
 
-                                        {/* <Grid item xs={12} sm={12}>
+                                        <Grid item xs={12} sm={12}>
                                             <Paging view={PagingView} />
                                             {/* <Paging
                                                     view={({ totalPages, onChange, current, page}) => (
@@ -251,9 +271,9 @@ export default function Home() {
                                                         }
                                                     })
                                                 }
-                                            />
+                                            /> */}
 
-                                        </Grid> */}
+                                        </Grid>
                                     </Grid>
                                 </ErrorBoundary>
                             </div>
