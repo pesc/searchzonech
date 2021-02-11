@@ -1,0 +1,38 @@
+{
+  "engineName": "domains",
+  "endpointBase": "https://api.searchzone.ch",
+  "searchKey": "search-fwyyo4i26hj5nruvauu3d372",
+  "resultFields": [
+    "a",
+    "txt",
+    "ns",
+    "valid_info",
+    "valid_domain",
+    "mx",
+    "aaaa",
+    "dnskey"
+  ],
+  "sortFields": [
+    "a",
+    "mx"
+  ],
+  "facets": [
+    "a",
+    "aaaa",
+    "mx",
+    "ns",
+    "txt",
+    "valid_info",
+    "valid_domain"
+  ],
+  "facetsNames": [
+    "Test",
+    "TestMX"
+  ],
+   "querySuggestFields": [
+    "domain"
+  ],
+  "titleField": "domain",
+  "urlField": "",
+  "debug": true
+}

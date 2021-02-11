@@ -1,0 +1,2 @@
+export { default as Layout } from "./Layout";
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9sYXlvdXRzL2luZGV4LmpzIl0sIm5hbWVzIjpbImRlZmF1bHQiLCJMYXlvdXQiXSwibWFwcGluZ3MiOiJBQUFBLFNBQVNBLE9BQU8sSUFBSUMsTUFBcEIsUUFBa0MsVUFBbEMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgeyBkZWZhdWx0IGFzIExheW91dCB9IGZyb20gXCIuL0xheW91dFwiO1xuIl19

@@ -1,0 +1,28 @@
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
+import PropTypes from "prop-types";
+import React from "react";
+import { appendClassName } from "./view-helpers";
+
+function ErrorBoundary(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
+      error = _ref.error,
+      rest = _objectWithoutProperties(_ref, ["children", "className", "error"]);
+
+  if (error) {
+    return /*#__PURE__*/React.createElement("div", _extends({
+      className: appendClassName("sui-search-error", className)
+    }, rest), error);
+  }
+
+  return children;
+}
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired,
+  error: PropTypes.string.isRequired,
+  className: PropTypes.string
+};
+export default ErrorBoundary;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9FcnJvckJvdW5kYXJ5LmpzIl0sIm5hbWVzIjpbIlByb3BUeXBlcyIsIlJlYWN0IiwiYXBwZW5kQ2xhc3NOYW1lIiwiRXJyb3JCb3VuZGFyeSIsImNoaWxkcmVuIiwiY2xhc3NOYW1lIiwiZXJyb3IiLCJyZXN0IiwicHJvcFR5cGVzIiwibm9kZSIsImlzUmVxdWlyZWQiLCJzdHJpbmciXSwibWFwcGluZ3MiOiI7O0FBQUEsT0FBT0EsU0FBUCxNQUFzQixZQUF0QjtBQUNBLE9BQU9DLEtBQVAsTUFBa0IsT0FBbEI7QUFFQSxTQUFTQyxlQUFULFFBQWdDLGdCQUFoQzs7QUFFQSxTQUFTQyxhQUFULE9BQWdFO0FBQUEsTUFBdkNDLFFBQXVDLFFBQXZDQSxRQUF1QztBQUFBLE1BQTdCQyxTQUE2QixRQUE3QkEsU0FBNkI7QUFBQSxNQUFsQkMsS0FBa0IsUUFBbEJBLEtBQWtCO0FBQUEsTUFBUkMsSUFBUTs7QUFDOUQsTUFBSUQsS0FBSixFQUFXO0FBQ1Qsd0JBQ0U7QUFBSyxNQUFBLFNBQVMsRUFBRUosZUFBZSxDQUFDLGtCQUFELEVBQXFCRyxTQUFyQjtBQUEvQixPQUFvRUUsSUFBcEUsR0FDR0QsS0FESCxDQURGO0FBS0Q7O0FBRUQsU0FBT0YsUUFBUDtBQUNEOztBQUVERCxhQUFhLENBQUNLLFNBQWQsR0FBMEI7QUFDeEJKLEVBQUFBLFFBQVEsRUFBRUosU0FBUyxDQUFDUyxJQUFWLENBQWVDLFVBREQ7QUFFeEJKLEVBQUFBLEtBQUssRUFBRU4sU0FBUyxDQUFDVyxNQUFWLENBQWlCRCxVQUZBO0FBR3hCTCxFQUFBQSxTQUFTLEVBQUVMLFNBQVMsQ0FBQ1c7QUFIRyxDQUExQjtBQU1BLGVBQWVSLGFBQWYiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUHJvcFR5cGVzIGZyb20gXCJwcm9wLXR5cGVzXCI7XG5pbXBvcnQgUmVhY3QgZnJvbSBcInJlYWN0XCI7XG5cbmltcG9ydCB7IGFwcGVuZENsYXNzTmFtZSB9IGZyb20gXCIuL3ZpZXctaGVscGVyc1wiO1xuXG5mdW5jdGlvbiBFcnJvckJvdW5kYXJ5KHsgY2hpbGRyZW4sIGNsYXNzTmFtZSwgZXJyb3IsIC4uLnJlc3QgfSkge1xuICBpZiAoZXJyb3IpIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdiBjbGFzc05hbWU9e2FwcGVuZENsYXNzTmFtZShcInN1aS1zZWFyY2gtZXJyb3JcIiwgY2xhc3NOYW1lKX0gey4uLnJlc3R9PlxuICAgICAgICB7ZXJyb3J9XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG5cbiAgcmV0dXJuIGNoaWxkcmVuO1xufVxuXG5FcnJvckJvdW5kYXJ5LnByb3BUeXBlcyA9IHtcbiAgY2hpbGRyZW46IFByb3BUeXBlcy5ub2RlLmlzUmVxdWlyZWQsXG4gIGVycm9yOiBQcm9wVHlwZXMuc3RyaW5nLmlzUmVxdWlyZWQsXG4gIGNsYXNzTmFtZTogUHJvcFR5cGVzLnN0cmluZ1xufTtcblxuZXhwb3J0IGRlZmF1bHQgRXJyb3JCb3VuZGFyeTtcbiJdfQ==

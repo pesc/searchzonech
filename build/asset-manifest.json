@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/static/js/main.5526808f.js",
+    "main.js.map": "/static/js/main.5526808f.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ce74fcb024418d0ddd4ff670fe2e471f.js": "/precache-manifest.ce74fcb024418d0ddd4ff670fe2e471f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/main.5526808f.js.LICENSE.txt": "/static/js/main.5526808f.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/main.5526808f.js"
+  ]
+}

@@ -1,0 +1,62 @@
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
+import PropTypes from "prop-types";
+import React from "react";
+import Select from "react-select";
+import { appendClassName } from "./view-helpers";
+var setDefaultStyle = {
+  option: function option() {
+    return {};
+  },
+  control: function control() {
+    return {};
+  },
+  dropdownIndicator: function dropdownIndicator() {
+    return {};
+  },
+  indicatorSeparator: function indicatorSeparator() {
+    return {};
+  }
+};
+
+function Sorting(_ref) {
+  var className = _ref.className,
+      label = _ref.label,
+      _onChange = _ref.onChange,
+      options = _ref.options,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, ["className", "label", "onChange", "options", "value"]);
+
+  var selectedValue = value;
+  var selectedOption = selectedValue ? options.find(function (option) {
+    return option.value === selectedValue;
+  }) : null;
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: appendClassName("sui-sorting", className)
+  }, rest), label && /*#__PURE__*/React.createElement("div", {
+    className: "sui-sorting__label"
+  }, label), /*#__PURE__*/React.createElement(Select, {
+    className: "sui-select",
+    classNamePrefix: "sui-select",
+    value: selectedOption,
+    onChange: function onChange(o) {
+      return _onChange(o.value);
+    },
+    options: options,
+    isSearchable: false,
+    styles: setDefaultStyle
+  }));
+}
+
+Sorting.propTypes = {
+  className: PropTypes.string,
+  label: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string
+  })).isRequired,
+  value: PropTypes.string
+};
+export default Sorting;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9Tb3J0aW5nLmpzIl0sIm5hbWVzIjpbIlByb3BUeXBlcyIsIlJlYWN0IiwiU2VsZWN0IiwiYXBwZW5kQ2xhc3NOYW1lIiwic2V0RGVmYXVsdFN0eWxlIiwib3B0aW9uIiwiY29udHJvbCIsImRyb3Bkb3duSW5kaWNhdG9yIiwiaW5kaWNhdG9yU2VwYXJhdG9yIiwiU29ydGluZyIsImNsYXNzTmFtZSIsImxhYmVsIiwib25DaGFuZ2UiLCJvcHRpb25zIiwidmFsdWUiLCJyZXN0Iiwic2VsZWN0ZWRWYWx1ZSIsInNlbGVjdGVkT3B0aW9uIiwiZmluZCIsIm8iLCJwcm9wVHlwZXMiLCJzdHJpbmciLCJmdW5jIiwiaXNSZXF1aXJlZCIsImFycmF5T2YiLCJzaGFwZSJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxPQUFPQSxTQUFQLE1BQXNCLFlBQXRCO0FBQ0EsT0FBT0MsS0FBUCxNQUFrQixPQUFsQjtBQUNBLE9BQU9DLE1BQVAsTUFBbUIsY0FBbkI7QUFFQSxTQUFTQyxlQUFULFFBQWdDLGdCQUFoQztBQUVBLElBQU1DLGVBQWUsR0FBRztBQUN0QkMsRUFBQUEsTUFBTSxFQUFFO0FBQUEsV0FBTyxFQUFQO0FBQUEsR0FEYztBQUV0QkMsRUFBQUEsT0FBTyxFQUFFO0FBQUEsV0FBTyxFQUFQO0FBQUEsR0FGYTtBQUd0QkMsRUFBQUEsaUJBQWlCLEVBQUU7QUFBQSxXQUFPLEVBQVA7QUFBQSxHQUhHO0FBSXRCQyxFQUFBQSxrQkFBa0IsRUFBRTtBQUFBLFdBQU8sRUFBUDtBQUFBO0FBSkUsQ0FBeEI7O0FBT0EsU0FBU0MsT0FBVCxPQUEwRTtBQUFBLE1BQXZEQyxTQUF1RCxRQUF2REEsU0FBdUQ7QUFBQSxNQUE1Q0MsS0FBNEMsUUFBNUNBLEtBQTRDO0FBQUEsTUFBckNDLFNBQXFDLFFBQXJDQSxRQUFxQztBQUFBLE1BQTNCQyxPQUEyQixRQUEzQkEsT0FBMkI7QUFBQSxNQUFsQkMsS0FBa0IsUUFBbEJBLEtBQWtCO0FBQUEsTUFBUkMsSUFBUTs7QUFDeEUsTUFBTUMsYUFBYSxHQUFHRixLQUF0QjtBQUVBLE1BQU1HLGNBQWMsR0FBR0QsYUFBYSxHQUNoQ0gsT0FBTyxDQUFDSyxJQUFSLENBQWEsVUFBQWIsTUFBTTtBQUFBLFdBQUlBLE1BQU0sQ0FBQ1MsS0FBUCxLQUFpQkUsYUFBckI7QUFBQSxHQUFuQixDQURnQyxHQUVoQyxJQUZKO0FBSUEsc0JBQ0U7QUFBSyxJQUFBLFNBQVMsRUFBRWIsZUFBZSxDQUFDLGFBQUQsRUFBZ0JPLFNBQWhCO0FBQS9CLEtBQStESyxJQUEvRCxHQUNHSixLQUFLLGlCQUFJO0FBQUssSUFBQSxTQUFTLEVBQUM7QUFBZixLQUFxQ0EsS0FBckMsQ0FEWixlQUVFLG9CQUFDLE1BQUQ7QUFDRSxJQUFBLFNBQVMsRUFBQyxZQURaO0FBRUUsSUFBQSxlQUFlLEVBQUMsWUFGbEI7QUFHRSxJQUFBLEtBQUssRUFBRU0sY0FIVDtBQUlFLElBQUEsUUFBUSxFQUFFLGtCQUFBRSxDQUFDO0FBQUEsYUFBSVAsU0FBUSxDQUFDTyxDQUFDLENBQUNMLEtBQUgsQ0FBWjtBQUFBLEtBSmI7QUFLRSxJQUFBLE9BQU8sRUFBRUQsT0FMWDtBQU1FLElBQUEsWUFBWSxFQUFFLEtBTmhCO0FBT0UsSUFBQSxNQUFNLEVBQUVUO0FBUFYsSUFGRixDQURGO0FBY0Q7O0FBRURLLE9BQU8sQ0FBQ1csU0FBUixHQUFvQjtBQUNsQlYsRUFBQUEsU0FBUyxFQUFFVixTQUFTLENBQUNxQixNQURIO0FBRWxCVixFQUFBQSxLQUFLLEVBQUVYLFNBQVMsQ0FBQ3FCLE1BRkM7QUFHbEJULEVBQUFBLFFBQVEsRUFBRVosU0FBUyxDQUFDc0IsSUFBVixDQUFlQyxVQUhQO0FBSWxCVixFQUFBQSxPQUFPLEVBQUViLFNBQVMsQ0FBQ3dCLE9BQVYsQ0FDUHhCLFNBQVMsQ0FBQ3lCLEtBQVYsQ0FBZ0I7QUFBRVgsSUFBQUEsS0FBSyxFQUFFZCxTQUFTLENBQUNxQixNQUFuQjtBQUEyQlYsSUFBQUEsS0FBSyxFQUFFWCxTQUFTLENBQUNxQjtBQUE1QyxHQUFoQixDQURPLEVBRVBFLFVBTmdCO0FBT2xCVCxFQUFBQSxLQUFLLEVBQUVkLFNBQVMsQ0FBQ3FCO0FBUEMsQ0FBcEI7QUFVQSxlQUFlWixPQUFmIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFByb3BUeXBlcyBmcm9tIFwicHJvcC10eXBlc1wiO1xuaW1wb3J0IFJlYWN0IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IFNlbGVjdCBmcm9tIFwicmVhY3Qtc2VsZWN0XCI7XG5cbmltcG9ydCB7IGFwcGVuZENsYXNzTmFtZSB9IGZyb20gXCIuL3ZpZXctaGVscGVyc1wiO1xuXG5jb25zdCBzZXREZWZhdWx0U3R5bGUgPSB7XG4gIG9wdGlvbjogKCkgPT4gKHt9KSxcbiAgY29udHJvbDogKCkgPT4gKHt9KSxcbiAgZHJvcGRvd25JbmRpY2F0b3I6ICgpID0+ICh7fSksXG4gIGluZGljYXRvclNlcGFyYXRvcjogKCkgPT4gKHt9KVxufTtcblxuZnVuY3Rpb24gU29ydGluZyh7IGNsYXNzTmFtZSwgbGFiZWwsIG9uQ2hhbmdlLCBvcHRpb25zLCB2YWx1ZSwgLi4ucmVzdCB9KSB7XG4gIGNvbnN0IHNlbGVjdGVkVmFsdWUgPSB2YWx1ZTtcblxuICBjb25zdCBzZWxlY3RlZE9wdGlvbiA9IHNlbGVjdGVkVmFsdWVcbiAgICA/IG9wdGlvbnMuZmluZChvcHRpb24gPT4gb3B0aW9uLnZhbHVlID09PSBzZWxlY3RlZFZhbHVlKVxuICAgIDogbnVsbDtcblxuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPXthcHBlbmRDbGFzc05hbWUoXCJzdWktc29ydGluZ1wiLCBjbGFzc05hbWUpfSB7Li4ucmVzdH0+XG4gICAgICB7bGFiZWwgJiYgPGRpdiBjbGFzc05hbWU9XCJzdWktc29ydGluZ19fbGFiZWxcIj57bGFiZWx9PC9kaXY+fVxuICAgICAgPFNlbGVjdFxuICAgICAgICBjbGFzc05hbWU9XCJzdWktc2VsZWN0XCJcbiAgICAgICAgY2xhc3NOYW1lUHJlZml4PVwic3VpLXNlbGVjdFwiXG4gICAgICAgIHZhbHVlPXtzZWxlY3RlZE9wdGlvbn1cbiAgICAgICAgb25DaGFuZ2U9e28gPT4gb25DaGFuZ2Uoby52YWx1ZSl9XG4gICAgICAgIG9wdGlvbnM9e29wdGlvbnN9XG4gICAgICAgIGlzU2VhcmNoYWJsZT17ZmFsc2V9XG4gICAgICAgIHN0eWxlcz17c2V0RGVmYXVsdFN0eWxlfVxuICAgICAgLz5cbiAgICA8L2Rpdj5cbiAgKTtcbn1cblxuU29ydGluZy5wcm9wVHlwZXMgPSB7XG4gIGNsYXNzTmFtZTogUHJvcFR5cGVzLnN0cmluZyxcbiAgbGFiZWw6IFByb3BUeXBlcy5zdHJpbmcsXG4gIG9uQ2hhbmdlOiBQcm9wVHlwZXMuZnVuYy5pc1JlcXVpcmVkLFxuICBvcHRpb25zOiBQcm9wVHlwZXMuYXJyYXlPZihcbiAgICBQcm9wVHlwZXMuc2hhcGUoeyB2YWx1ZTogUHJvcFR5cGVzLnN0cmluZywgbGFiZWw6IFByb3BUeXBlcy5zdHJpbmcgfSlcbiAgKS5pc1JlcXVpcmVkLFxuICB2YWx1ZTogUHJvcFR5cGVzLnN0cmluZ1xufTtcblxuZXhwb3J0IGRlZmF1bHQgU29ydGluZztcbiJdfQ==
