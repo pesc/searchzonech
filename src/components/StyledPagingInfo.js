@@ -6,19 +6,18 @@ export default function ({
     className,
     end,
     start,
-    searchTerm, 
+    searchTerm,
     totalResults
 }) {
 
     return (
         <>
-        { searchTerm && (
-            
-        <Breadcrumbs aria-label="breadcrumb">
-            <Typography color="textPrimary">{"Results for " + searchTerm}</Typography>
-                    <Typography color="textPrimary">{"Showing " + start + " - " + end  + " out of " + totalResults}</Typography>
-        </Breadcrumbs>
-        )}
+            { searchTerm && (
+                <Breadcrumbs aria-label="breadcrumb">
+                    <Typography color="textPrimary">{"Results for " + searchTerm}</Typography>
+                    <Typography color="textPrimary">{"Showing " + start + " - " + end + " out of " + totalResults}</Typography>
+                </Breadcrumbs>
+            )}
         </>
     );
 }
