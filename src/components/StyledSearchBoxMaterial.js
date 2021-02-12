@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     box: {
         justifyContent: "center",
         flexGrow: 1,
+        marginBottom: "10px",
     },
     paper: {
         padding: theme.spacing(2),

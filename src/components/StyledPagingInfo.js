@@ -4,7 +4,8 @@ import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 
 export default function ({
     className,
-    end, 
+    end,
+    start,
     searchTerm, 
     totalResults
 }) {
@@ -15,7 +16,7 @@ export default function ({
             
         <Breadcrumbs aria-label="breadcrumb">
             <Typography color="textPrimary">{"Results for " + searchTerm}</Typography>
-            <Typography color="textPrimary">{"Showing " + end + " out of " + totalResults}</Typography>
+                    <Typography color="textPrimary">{"Showing " + start + " - " + end  + " out of " + totalResults}</Typography>
         </Breadcrumbs>
         )}
         </>
