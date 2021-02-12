@@ -12,7 +12,7 @@ import {
     ErrorBoundary,
     Facet,
     SearchProvider,
-    SearchBox,
+    //SearchBox,
     Results,
     PagingInfo,
     //ResultsPerPage,

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import PropTypes from "prop-types";
-import RCPagination from "rc-pagination";
-import enUsLocale from "rc-pagination/lib/locale/en_US";
+//import RCPagination from "rc-pagination";
+//import enUsLocale from "rc-pagination/lib/locale/en_US";
 
 //import { appendClassName } from "./view-helpers";
 import { makeStyles } from '@material-ui/core/styles';
@@ -36,7 +36,7 @@ function PagingView({
     totalPages,
     ...rest
 }) {
-    const [page, setPage] = React.useState(1);
+    const [page] = React.useState(1);
     current = page
     const classes = useStyles();
     return (

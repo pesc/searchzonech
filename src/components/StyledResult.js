@@ -47,7 +47,7 @@ function htmlEscape(str) {
 
 export function isFieldValueWrapper(object) {
     return (
-        object && (object.hasOwnProperty("raw") || object.hasOwnProperty("snippet") && !object.hasOwnProperty("score"))
+        (object && (object.hasOwnProperty("raw") || object.hasOwnProperty("snippet")) && !object.hasOwnProperty("score"))
     );
 }
 
