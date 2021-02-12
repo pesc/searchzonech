@@ -90,31 +90,31 @@ export default function Home() {
                         return (
                             <div className="App" style={{ padding: 20 }} >
                                 <ErrorBoundary>
-                                    <Grid container spacing={2}>
-                                        <Grid item xs={12} sm={12}>
-                                            <SearchBoxMaterial />
+                                    <Grid className="outerGrid" container spacing={2}>
+                                        <Grid className="searchGrid" item xs={12} sm={12}>
+                                            <SearchBoxMaterial className="searchBox" />
                                             {isLoading && (
-                                                <LinearProgress />
+                                                <LinearProgress className="progressBar" />
                                             )}
                                         </Grid>
-                                        <Grid item xs={12} sm={12} md={4} lg={4} xl={3}>
+                                        <Grid className="navGrid" item xs={12} sm={12} md={4} lg={4} xl={3}>
                                             <>
-                                                <PagingInfo style={{ display: 'flex', justifyContent: 'flex-end' }} view={StyledPagingInfo} />
-                                                <Sorting view={SortView}
+                                                <PagingInfo className="pagingInfo" style={{ display: 'flex', justifyContent: 'flex-end' }} view={StyledPagingInfo} />
+                                                <Sorting className="sortingSelect" view={SortView}
                                                     label={"Sort by"}
                                                     sortOptions={buildSortOptionsFromConfig()}
                                                 />
                                                 {/* ToDo can be done much more elegant -> map key value */}
                                                 {getFacetFields().map((field, index) => (
-                                                    <Facet key={field} view={FacetView} field={field} label={getFacetFieldsNames()[index]} isFilterable={true} />
+                                                    <Facet className="facetSelect" key={field} view={FacetView} field={field} label={getFacetFieldsNames()[index]} isFilterable={true} />
                                                 ))}
                                             </>
 
                                         </Grid>
-                                        <Grid item md={1} lg={1} xl={1}>
-                                            <Divider orientation='vertical' />
+                                        <Grid className="dividerGrid" item md={1} lg={1} xl={1}>
+                                            <Divider className="verticalDevider" orientation='vertical' />
                                         </Grid>
-                                        <Grid item xs={12} sm={12} md={6} lg={6} xl={8}>
+                                        <Grid className="resultGrid" item xs={12} sm={12} md={6} lg={6} xl={8}>
                                             <>
                                                 {wasSearched && (
                                                     <Results className={classes.ul} resultView={ResultView} />
@@ -122,8 +122,8 @@ export default function Home() {
                                             </>
                                         </Grid>
 
-                                        <Grid item xs={12} sm={12}>
-                                            <Paging view={PagingView} />
+                                        <Grid className="pagingGrid" item xs={12} sm={12}>
+                                            <Paging className="pagingSelect" view={PagingView} />
                                         </Grid>
                                     </Grid>
                                 </ErrorBoundary>

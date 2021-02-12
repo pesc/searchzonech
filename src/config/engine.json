@@ -17,10 +17,7 @@
     "aaaa",
     "domain",
     "mx",
-    "ns",
-    "valid_info",
-    "valid_domain",
-    "timestamp"
+    "ns"
   ],
   "facets": [
     "a",

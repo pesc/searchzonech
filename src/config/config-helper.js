@@ -22,10 +22,6 @@ function toLowerCase(string) {
   if (string) return string.toLowerCase();
 }
 
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
 export function getTitleField() {
   // If no title field configuration has been provided, we attempt
   // to use a "title" field, if one exists
@@ -151,12 +147,12 @@ export function buildSortOptionsFromConfig() {
     },
     ...(config.sortFields || []).reduce((acc, sortField) => {
       acc.push({
-        name: `${capitalizeFirstLetter(sortField)} ASC`,
+        name: `${sortField} ASC`,
         value: sortField,
         direction: "asc"
       });
       acc.push({
-        name: `${capitalizeFirstLetter(sortField)} DESC`,
+        name: `${sortField} DESC`,
         value: sortField,
         direction: "desc"
       });
