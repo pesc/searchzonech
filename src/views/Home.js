@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AppSearchAPIConnector from "@elastic/search-ui-app-search-connector";
 import { makeStyles } from '@material-ui/core/styles';
-import SearchBoxMaterial from "../components/StyledSearchBoxMaterial"
+import SearchBoxMaterial from "../components/StyledSearchBox"
 import ResultView from "../components/StyledResult"
 import PagingView from "../components/StyledPaging"
 import FacetView from "../components/StyledFacet"
@@ -25,7 +25,8 @@ import {
     buildSearchOptionsFromConfig,
     buildSortOptionsFromConfig,
     getConfig,
-    getFacetFields
+    getFacetFields,
+    getFacetFieldsNames
 } from "../config/config-helper";
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { Divider } from "@material-ui/core";
@@ -103,8 +104,9 @@ export default function Home() {
                                                     label={"Sort by"}
                                                     sortOptions={buildSortOptionsFromConfig()}
                                                 />
-                                                {getFacetFields().map(field => (
-                                                    <Facet key={field} view={FacetView} field={field} label={field} isFilterable={true} />
+                                                {/* ToDo can be done much more elegant -> map key value */}
+                                                {getFacetFields().map((field, index) => (
+                                                    <Facet key={field} view={FacetView} field={field} label={getFacetFieldsNames()[index]} isFilterable={true} />
                                                 ))}
                                             </>
 

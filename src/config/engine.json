@@ -32,8 +32,13 @@
     "valid_domain"
   ],
   "facetsNames": [
-    "Test",
-    "TestMX"
+    "IPv4",
+    "IPv6",
+    "MX",
+    "NS",
+    "TXT",
+    "Valid info@",
+    "valid domain"
   ],
    "querySuggestFields": [
     "domain"

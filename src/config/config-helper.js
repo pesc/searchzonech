@@ -138,7 +138,6 @@ export function buildFacetConfigFromConfig() {
     };
     return acc;
   }, undefined);
-
   return facets;
 }
 
