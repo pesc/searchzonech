@@ -2,14 +2,30 @@
   "name": "searchzonech",
   "version": "2.0.0",
   "license": "Apache-2.0",
+  "description": "Search the .ch zone file for DNS Records",
+  "repository": "https://github.com/pesc/searchzonech",
+  "homepage": "https://searchzone.ch",
+  "author": {
+    "name": "Pascal Christen",
+    "email": "pascal@pascalchristen.ch",
+    "url": "https://pascalchristen.ch"
+  },
+  "engines": {
+    "npm": ">=7.5.0",
+    "node": ">=15.8.0"
+  },
   "private": true,
   "dependencies": {
+    "@devexpress/dx-react-chart": "^2.7.4",
+    "@devexpress/dx-react-chart-material-ui": "^2.7.4",
+    "@devexpress/dx-react-core": "^2.7.4",
     "@elastic/react-search-ui": "^1.4.1",
     "@elastic/search-ui-app-search-connector": "^1.4.1",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "history": "^5.0.0",
+    "material-ui-cookie-consent": "^0.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
