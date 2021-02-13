@@ -1,40 +1,63 @@
-<p align="center"><img src="https://github.com/elastic/app-search-reference-ui-react/blob/master/logo-app-search.png?raw=true" alt="Elastic App Search Logo"></p>
+<h1 align="center">Welcome to searchzone.ch 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/npm-%3E%3D7.5.0-blue.svg" />
+  <img src="https://img.shields.io/badge/node-%3E%3D15.8.0-blue.svg" />
+  <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">
+    <img alt="License: Apache--2.0" src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/the\_pesc" target="_blank">
+    <img alt="Twitter: the\_pesc" src="https://img.shields.io/twitter/follow/the\_pesc.svg?style=social" />
+  </a>
+</p>
 
-> A configurable, generic search UI for
-> any [Elastic App Search](https://www.elastic.co/products/app-search) Engine.
+> Search the .ch zone file for DNS Records
 
+### 🏠 [Homepage](https://searchzone.ch)
 
-## Getting started 🐣
+## Prerequisites
 
-```bash
-# Run this to set everything up
+- npm >=7.5.0
+- node >=15.8.0
+
+## Install
+
+```sh
 npm install
-
-# Run this to start your application and open it up in a new browser window
-npm start
 ```
 
 ## Usage
 
-### Updating configuration
+```sh
+npm run start
+```
 
-The project can be configured via a JSON [config file](src/config/engine.json).
+## Run tests
 
-You can easily control things like...
+```sh
+npm run test
+```
 
-- The Engine the UI runs against
-- Which fields are displayed
-- The filters that are used
+## Author
 
-If you would like to make configuration changes, there is no need to regenerate
-this app from your App Search Dashboard!
+👤 **Pascal Christen**
 
-You can simply open up the
-[engine.json](src/config/engine.json) file, update the [options](#config),
-and then restart this app.
+* Website: https://pascalchristen.ch
+* Twitter: [@the\_pesc](https://twitter.com/the\_pesc)
+* Github: [@pesc](https://github.com/pesc)
 
-## License 📗
+## 🤝 Contributing
 
-[Apache-2.0](https://github.com/elastic/app-search-reference-ui-react/blob/master/LICENSE.md) © [Elastic](https://github.com/elastic)
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/pesc/searchzonech/issues). 
 
-Thank you to all the [contributors](https://github.com/elastic/app-search-reference-ui-react/graphs/contributors)!
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2021 [Pascal Christen](https://github.com/pesc).<br />
+This project is [Apache--2.0](https://www.apache.org/licenses/LICENSE-2.0) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
