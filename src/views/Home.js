@@ -17,6 +17,7 @@ import {
     Sorting,
     WithSearch
 } from "@elastic/react-search-ui";
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 //import "@elastic/react-search-ui-views/lib/styles/styles.css";
 import {

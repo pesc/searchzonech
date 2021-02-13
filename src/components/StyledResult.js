@@ -2,7 +2,6 @@ import React from "react";
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -10,7 +9,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Dns from '@material-ui/icons/Dns';
 import Divider from '@material-ui/core/Divider';
-import { TextFields, VpnKey, MailOutline, VerifiedUser, AlternateEmail, Filter6, Filter4, DeleteForever } from '@material-ui/icons';
+import { TextFields, VpnKey, ContactMail, VerifiedUser, AlternateEmail, Filter6, Filter4, Block, Lock, Security, VpnLock, InfoOutlined } from '@material-ui/icons';
+import Tooltip from '@material-ui/core/Tooltip';
+import { green, red } from '@material-ui/core/colors';
 
 const StyledCard = withStyles({
     root: {
@@ -81,15 +82,17 @@ function getEscapedFields(result) {
     }, {});
 }
 
-function generateListItems(result, icon, field) {
+function generateListItems(result, icon, field, tooltip) {
     const DynamicIconButton = icon;
     const resultField = result[field]
     if (resultField !== undefined) {
         return (
             <StyledListItem>
-                <ListItemIcon>
-                    <DynamicIconButton />
-                </ListItemIcon>
+                <Tooltip title={tooltip} aria-label={tooltip}>
+                    <ListItemIcon>
+                        <DynamicIconButton />
+                    </ListItemIcon>
+                </Tooltip>
                 <ListItemText multiline="true" style={{ wordWrap: "break-word" }}
                     primary={resultField}
                 />
@@ -98,16 +101,20 @@ function generateListItems(result, icon, field) {
     }
 }
 
-function generateButtonItems(result, icon, field) {
+function generateButtonItems(result, icon, field, tooltip) {
     const DynamicIconButton = icon;
     const resultField = result[field]
-    if (resultField !== undefined) {
+    if (resultField === 'true') {
         return (
-            <>
-                <IconButton size="small" disabled>
-                    <DynamicIconButton />
-                </IconButton>
-            </>
+            <Tooltip title={tooltip} aria-label={tooltip}>
+                <DynamicIconButton style={{ color: green[500] }} />
+            </Tooltip>
+        );
+    } else {
+        return (
+            <Tooltip title={tooltip} aria-label={tooltip}>
+                <DynamicIconButton style={{ color: red[500] }} />
+            </Tooltip>
         );
     }
 }
@@ -121,20 +128,27 @@ export default function ({ result }) {
                     <Typography variant="h5" component="h2" color="primary">
                         {fields.domain}
                         <>
-                            {(generateButtonItems(fields, (fields?.valid_domain === 'true') ? VerifiedUser : DeleteForever, "valid_domain"))}
-                            {(generateButtonItems(fields, MailOutline, "valid_info"))}
+                            {(generateButtonItems(fields, VerifiedUser, "domain_valid", "Valid domain"))}
+                            {(generateButtonItems(fields, Lock, "dnskey_valid", "Valid DNSSEC"))}
+                            {(generateButtonItems(fields, ContactMail, "info_valid", "Valid info@"))}
+                            {(generateButtonItems(fields, Security, "dmarc_valid", "Has DMARC"))}
+                            {(generateButtonItems(fields, Block, "spf_valid", "Has SPF"))}
                         </>
                     </Typography>
 
                     <Divider />
                     <Typography variant="body2" color="textPrimary" style={{ whiteSpace: 'pre-line' }} component="a">
                         <List>
-                            {(generateListItems(fields, Dns, "ns"))}
-                            {(generateListItems(fields, Filter4, "a"))}
-                            {(generateListItems(fields, Filter6, "aaaa"))}
-                            {(generateListItems(fields, AlternateEmail, "mx"))}
-                            {(generateListItems(fields, TextFields, "txt"))}
-                            {(generateListItems(fields, VpnKey, "dnskey"))}
+                            {/* ToDo: Display message if everything is empty */}
+                            {(generateListItems(fields, InfoOutlined, "soa_record", "SOA Record"))}
+                            {(generateListItems(fields, Filter4, "a_record", "A Records"))}
+                            {(generateListItems(fields, Filter6, "aaaa_record", "AAAA Records"))}
+                            {(generateListItems(fields, Dns, "ns_record", "NS Records"))}
+                            {(generateListItems(fields, AlternateEmail, "mx_record", "MX Records"))}
+                            {(generateListItems(fields, TextFields, "txt_record", "TXT Records"))}
+                            {(generateListItems(fields, VpnKey, "dnskey_record", "DNSKEY Record"))}
+                            {(generateListItems(fields, VpnLock, "caa_record", "CAA Record"))}
+                            {(generateListItems(fields, VpnLock, "dmarc_record", "DMARC Record"))}
                         </List>
                     </Typography>
                 </CardContent>

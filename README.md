@@ -6,7 +6,7 @@
   <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">
     <img alt="License: Apache--2.0" src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" />
   </a>
-  <a href="https://twitter.com/the\_pesc" target="_blank">
+  <a href="https://twitter.com/the_pesc" target="_blank">
     <img alt="Twitter: the_pesc" src="https://img.shields.io/twitter/follow/the_pesc.svg?style=social" />
   </a>
 </p>
@@ -46,7 +46,7 @@ npm run test
 👤 **Pascal Christen**
 
 * Website: https://pascalchristen.ch
-* Twitter: [@the\_pesc](https://twitter.com/the_pesc)
+* Twitter: [@the_pesc](https://twitter.com/the_pesc)
 * Github: [@pesc](https://github.com/pesc)
 
 ## 🤝 Contributing

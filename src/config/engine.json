@@ -1,32 +1,49 @@
 {
-  "engineName": "domains",
+  "engineName": "domains-test",
   "endpointBase": "https://api.searchzone.ch",
-  "searchKey": "search-fwyyo4i26hj5nruvauu3d372",
+  "searchKey": "search-en53y1zzjpuqfyjr7yh3jemg",
   "resultFields": [
-    "a",
-    "txt",
-    "ns",
-    "valid_info",
-    "valid_domain",
-    "mx",
-    "aaaa",
-    "dnskey"
+    "domain",
+    "soa_record",
+    "soa_valid",
+    "a_record",
+    "a_valid",
+    "aaaa_record",
+    "aaaa_valid",
+    "txt_record",
+    "txt_valid",
+    "ns_record",
+    "ns_valid",
+    "caa_record",
+    "caa_valid",
+    "ds_record",
+    "ds_valid",
+    "dnskey_record",
+    "dnskey_valid",
+    "soa_record",
+    "soa_valid",
+    "mx_record",
+    "mx_valid",
+    "dmarc_record",
+    "dmarc_valid",
+    "info_valid",
+    "domain_valid",
+    "spf_valid"
   ],
   "sortFields": [
-    "a",
-    "aaaa",
-    "domain",
-    "mx",
-    "ns"
+    "a_record",
+    "aaaa_valid",
+    "domain"
   ],
   "facets": [
-    "a",
-    "aaaa",
-    "mx",
-    "ns",
-    "txt",
-    "valid_info",
-    "valid_domain"
+    "a_record",
+    "aaaa_record",
+    "mx_record",
+    "ns_record",
+    "txt_record",
+    "info_valid",
+    "domain_valid",
+    "dnskey_valid"
   ],
   "facetsNames": [
     "IPv4",
@@ -35,7 +52,8 @@
     "NS",
     "TXT",
     "Valid info@",
-    "valid domain"
+    "Valid domain",
+    "DNSSEC"
   ],
    "querySuggestFields": [
     "domain"
