@@ -7,12 +7,15 @@
     <img alt="License: Apache--2.0" src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" />
   </a>
   <a href="https://twitter.com/the\_pesc" target="_blank">
-    <img alt="Twitter: the\_pesc" src="https://img.shields.io/twitter/follow/the\_pesc.svg?style=social" />
+    <img alt="Twitter: the_pesc" src="https://img.shields.io/twitter/follow/the_pesc.svg?style=social" />
   </a>
 </p>
 
-> Search the .ch zone file for DNS Records
+[![Netlify Status](https://api.netlify.com/api/v1/badges/16ac7a60-8604-42f7-8bf2-f9c3ded889ac/deploy-status)](https://app.netlify.com/sites/searchzonech/deploys)
+![Development Workflow](https://github.com/pesc/searchzonech/workflows/Development%20Workflow/badge.svg?branch=ng)
+![CodeQL](https://github.com/pesc/searchzonech/workflows/CodeQL/badge.svg)
 
+> Search the .ch zone file for DNS Records
 ### 🏠 [Homepage](https://searchzone.ch)
 
 ## Prerequisites
@@ -43,7 +46,7 @@ npm run test
 👤 **Pascal Christen**
 
 * Website: https://pascalchristen.ch
-* Twitter: [@the\_pesc](https://twitter.com/the\_pesc)
+* Twitter: [@the\_pesc](https://twitter.com/the_pesc)
 * Github: [@pesc](https://github.com/pesc)
 
 ## 🤝 Contributing
@@ -58,6 +61,3 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2021 [Pascal Christen](https://github.com/pesc).<br />
 This project is [Apache--2.0](https://www.apache.org/licenses/LICENSE-2.0) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
