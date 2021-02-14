@@ -48,7 +48,7 @@ const config = {
     apiConnector: connector,
     alwaysSearchOnInitialLoad: true,
     initialState: {
-        resultsPerPage: 10
+        resultsPerPage: 5
     }
 };
 

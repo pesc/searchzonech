@@ -28,7 +28,10 @@
     "dmarc_valid",
     "info_valid",
     "domain_valid",
-    "spf_valid"
+    "spf_valid",
+    "timestamp",
+    "timestamp_firstseen",
+    "timestamp_lastseen"
   ],
   "sortFields": [
     "a_record",
