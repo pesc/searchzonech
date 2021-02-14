@@ -58,7 +58,7 @@
     "Valid domain",
     "DNSSEC"
   ],
-   "querySuggestFields": [
+  "querySuggestFields": [
     "domain"
   ],
   "titleField": "domain",
