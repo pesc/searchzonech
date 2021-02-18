@@ -9,7 +9,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Dns from '@material-ui/icons/Dns';
 import Divider from '@material-ui/core/Divider';
-import { TextFields, VpnKey, ContactMail, VerifiedUser, AlternateEmail, Filter6, Filter4, Block, Lock, Security, VpnLock, InfoOutlined } from '@material-ui/icons';
+import { TextFields, VpnKey, VerifiedUser, AlternateEmail, Filter6, Filter4, Block, Lock, Security, VpnLock, InfoOutlined } from '@material-ui/icons';
 import Tooltip from '@material-ui/core/Tooltip';
 import { green, red } from '@material-ui/core/colors';
 
@@ -130,7 +130,7 @@ export default function ({ result }) {
                         <>
                             {(generateButtonItems(fields, VerifiedUser, "domain_valid", "Valid domain"))}
                             {(generateButtonItems(fields, Lock, "dnskey_valid", "Valid DNSSEC"))}
-                            {(generateButtonItems(fields, ContactMail, "info_valid", "Valid info@"))}
+                            {/* {(generateButtonItems(fields, ContactMail, "info_valid", "Valid info@"))} */}
                             {(generateButtonItems(fields, Security, "dmarc_valid", "Has DMARC"))}
                             {(generateButtonItems(fields, Block, "spf_valid", "Has SPF"))}
                         </>

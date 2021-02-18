@@ -1,7 +1,7 @@
 {
-  "engineName": "domains-test",
+  "engineName": "domains-prod",
   "endpointBase": "https://api.searchzone.ch",
-  "searchKey": "search-en53y1zzjpuqfyjr7yh3jemg",
+  "searchKey": "search-fwyyo4i26hj5nruvauu3d372",
   "resultFields": [
     "domain",
     "soa_record",
@@ -46,7 +46,10 @@
     "txt_record",
     "info_valid",
     "domain_valid",
-    "dnskey_valid"
+    "dnskey_valid",
+    "dmarc_valid",
+    "spf_valid",
+    "caa_valid"
   ],
   "facetsNames": [
     "IPv4",
@@ -56,7 +59,10 @@
     "TXT",
     "Valid info@",
     "Valid domain",
-    "DNSSEC"
+    "DNSSEC",
+    "DMARC",
+    "SPF",
+    "CAA"
   ],
   "querySuggestFields": [
     "domain"
