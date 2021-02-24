@@ -11,8 +11,6 @@
   </a>
 </p>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/16ac7a60-8604-42f7-8bf2-f9c3ded889ac/deploy-status)](https://app.netlify.com/sites/searchzonech/deploys)
-![Development Workflow](https://github.com/pesc/searchzonech/workflows/Development%20Workflow/badge.svg?branch=ng)
 ![CodeQL](https://github.com/pesc/searchzonech/workflows/CodeQL/badge.svg)
 
 > Search the .ch zone file for DNS Records
