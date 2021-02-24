@@ -32,7 +32,6 @@ export default function HeaderBar() {
     return (
         <React.Fragment>
             <CssBaseline />
-
             <AppBar position="relative" className={classes.root}>
                 <Toolbar className={classes.toolbar}>
                     <Grid container
@@ -60,7 +59,7 @@ export default function HeaderBar() {
                                         <IconButton onClick={() => navigate("/impress")} aria-label="About searchzone.ch" color="inherit">
                                             <Info fontSize='small' />
                                         </IconButton>
-                                        <IconButton onClick={() => window.open('https://github.com/pesc/.ch-searchzone', '_blank')} aria-label="Source Code" color="inherit">
+                                        <IconButton onClick={() => window.open('https://github.com/pesc/searchzonech', '_blank')} aria-label="Source Code" color="inherit">
                                             <GitHub fontSize='small' />
                                         </IconButton>
                                         <IconButton onClick={() => navigate("/api")} aria-label="API" color="inherit">
