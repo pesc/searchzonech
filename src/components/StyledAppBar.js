@@ -42,7 +42,7 @@ export default function HeaderBar() {
                         <IconButton onClick={() => navigate("/impress")} aria-label="About searchzone.ch" color="inherit">
                         <Info />
                     </IconButton>
-                    <IconButton onClick={() => window.open('https://github.com/pesc/.ch-searchzone', '_blank')} aria-label="Source Code" color="inherit">
+                        <IconButton onClick={() => window.open('https://github.com/pesc/searchzonech', '_blank')} aria-label="Source Code" color="inherit">
                         <GitHub />
                     </IconButton>
                     <IconButton onClick={() => navigate("/api")} aria-label="API" color="inherit">
