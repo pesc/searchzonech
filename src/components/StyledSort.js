@@ -21,7 +21,7 @@ export default function SortView({
         ? options.find(option => option.value === selectedValue)
         : null;
     return (
-        <FormControl style={{ display: 'flex', justifyContent: 'flex-end' }} >
+        <FormControl style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 20 }} >
             <InputLabel htmlFor="age-native-simple">{label}</InputLabel>
             <NativeSelect
                 value={selectedOption.value}
