@@ -9,6 +9,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Dns from '@material-ui/icons/Dns';
 import Divider from '@material-ui/core/Divider';
+import Grid from '@material-ui/core/Grid';
 import { TextFields, VpnKey, VerifiedUser, AlternateEmail, Filter6, Filter4, Block, Lock, Security, VpnLock, InfoOutlined } from '@material-ui/icons';
 import Tooltip from '@material-ui/core/Tooltip';
 import { green, red } from '@material-ui/core/colors';
@@ -17,7 +18,6 @@ const StyledCard = withStyles({
     root: {
         marginBottom: '10px',
         paddingBottom: '5px',
-        width: '100%',
     },
 })(Card);
 
@@ -90,7 +90,7 @@ function generateListItems(result, icon, field, tooltip) {
             <StyledListItem>
                 <Tooltip title={tooltip} aria-label={tooltip}>
                     <ListItemIcon>
-                        <DynamicIconButton />
+                        <DynamicIconButton color="primary" />
                     </ListItemIcon>
                 </Tooltip>
                 <ListItemText multiline="true" style={{ wordWrap: "break-word" }}
@@ -125,17 +125,28 @@ export default function ({ result }) {
         <>
             <StyledCard>
                 <CardContent>
-                    <Typography variant="h5" component="h2" color="primary">
-                        {fields.domain}
-                        <>
-                            {(generateButtonItems(fields, VerifiedUser, "domain_valid", "Valid domain"))}
-                            {(generateButtonItems(fields, Lock, "dnskey_valid", "Valid DNSSEC"))}
-                            {/* {(generateButtonItems(fields, ContactMail, "info_valid", "Valid info@"))} */}
-                            {(generateButtonItems(fields, Security, "dmarc_valid", "Has DMARC"))}
-                            {(generateButtonItems(fields, Block, "spf_valid", "Has SPF"))}
-                        </>
-                    </Typography>
+                    <Grid container>
+                        <Grid item xs={6}>
+                            <Typography variant="h5" component="h2" color="primary">
+                                {fields.domain}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Grid container
+                                direction="row"
+                                justify="flex-end"
+                                alignItems="center">
+                                <Grid item>
+                                    {(generateButtonItems(fields, VerifiedUser, "domain_valid", "Valid domain"))}
+                                    {(generateButtonItems(fields, Lock, "dnskey_valid", "Valid DNSSEC"))}
+                                    {/* {(generateButtonItems(fields, ContactMail, "info_valid", "Valid info@"))} */}
+                                    {(generateButtonItems(fields, Security, "dmarc_valid", "Has DMARC"))}
+                                    {(generateButtonItems(fields, Block, "spf_valid", "Has SPF"))}
+                                </Grid>
+                            </Grid>
 
+                        </Grid>
+                    </Grid>
                     <Divider />
                     <Typography variant="body2" color="textPrimary" style={{ whiteSpace: 'pre-line' }} component="a">
                         <List>

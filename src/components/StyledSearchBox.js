@@ -22,7 +22,15 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+        width: '100%',
+        marginLeft: '5%',
+        marginRight: '5%',
+        borderRadius:' 3.2rem'
     },
+
+    customFullWidth: {
+        width: '100%'
+    }
 
 }));
 
@@ -31,11 +39,11 @@ export default function CustomizedInputBase() {
     return (
         <Box display="flex" className={classes.box}>
             <Paper className={classes.paper}>
-                <FormControl>
+                <FormControl className={classes.customFullWidth}>
                     <SearchBox
                         inputView={({ getInputProps, getButtonProps }) => (
                             <>
-                                <InputBase className={classes.input} autoFocus {...getInputProps({ placeholder: 'Search .ch zonefile' })}
+                                <InputBase autoFocus {...getInputProps({ placeholder: 'Search .ch zonefile' })} className={classes.customFullWidth}
                                     endAdornment={
                                         <InputAdornment position="end">
                                             <IconButton {...getButtonProps()} type="submit" className={classes.iconButton} aria-label="search" >

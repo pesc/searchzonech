@@ -14,8 +14,10 @@ import { scalePoint } from 'd3-scale';
 import { withStyles } from '@material-ui/core/styles';
 
 const data = [
-    { year: '2020', domains: 67225, dnssec: 46598 },
-    { year: '2021', domains: 179873, dnssec: 90560 },
+    { year: '2010', android: 67225, ios: 46598 },
+    { year: '2011', android: 179873, ios: 90560 },
+    { year: '2012', android: 310088, ios: 118848 },
+    { year: '2015', android: 539318, ios: 189924 },
 ];
 
 const chartRootStyles = {
@@ -80,13 +82,13 @@ export default class Demo extends React.PureComponent {
                     <ValueAxis />
 
                     <AreaSeries
-                        name="Test"
-                        valueField="domains"
+                        name="Android"
+                        valueField="android"
                         argumentField="year"
                     />
                     <AreaSeries
-                        name="Test"
-                        valueField="dnssec"
+                        name="iOS"
+                        valueField="ios"
                         argumentField="year"
                     />
                     <Animation />
@@ -97,7 +99,7 @@ export default class Demo extends React.PureComponent {
                         labelComponent={LegendLabel}
                     />
                     <Title
-                        text="Available soon"
+                        text="Worldwide Sales to End Users by OS"
                     />
                 </Chart>
             </Paper>
