@@ -1,0 +1,72 @@
+{
+  "engineName": "domains-prod",
+  "endpointBase": "https://api.searchzone.ch",
+  "searchKey": "search-fwyyo4i26hj5nruvauu3d372",
+  "resultFields": [
+    "domain",
+    "soa_record",
+    "soa_valid",
+    "a_record",
+    "a_valid",
+    "aaaa_record",
+    "aaaa_valid",
+    "txt_record",
+    "txt_valid",
+    "ns_record",
+    "ns_valid",
+    "caa_record",
+    "caa_valid",
+    "ds_record",
+    "ds_valid",
+    "dnskey_record",
+    "dnskey_valid",
+    "soa_record",
+    "soa_valid",
+    "mx_record",
+    "mx_valid",
+    "dmarc_record",
+    "dmarc_valid",
+    "info_valid",
+    "domain_valid",
+    "spf_valid",
+    "timestamp",
+    "timestamp_firstseen",
+    "timestamp_lastseen"
+  ],
+  "sortFields": [
+    "a_record",
+    "aaaa_valid",
+    "domain"
+  ],
+  "facets": [
+    "a_record",
+    "aaaa_record",
+    "mx_record",
+    "ns_record",
+    "txt_record",
+    "info_valid",
+    "domain_valid",
+    "dnskey_valid",
+    "dmarc_valid",
+    "spf_valid",
+    "caa_valid"
+  ],
+  "facetsNames": [
+    "IPv4",
+    "IPv6",
+    "MX",
+    "NS",
+    "TXT",
+    "Valid info@",
+    "Valid domain",
+    "DNSSEC",
+    "DMARC",
+    "SPF",
+    "CAA"
+  ],
+  "querySuggestFields": [
+    "domain"
+  ],
+  "titleField": "domain",
+  "urlField": ""
+}

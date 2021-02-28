@@ -1,52 +1,61 @@
-# .ch-searchzone
+<h1 align="center">Welcome to searchzone.ch 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/npm-%3E%3D7.5.0-blue.svg" />
+  <img src="https://img.shields.io/badge/node-%3E%3D15.8.0-blue.svg" />
+  <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">
+    <img alt="License: Apache--2.0" src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/the_pesc" target="_blank">
+    <img alt="Twitter: the_pesc" src="https://img.shields.io/twitter/follow/the_pesc.svg?style=social" />
+  </a>
+</p>
 
-Search the .ch zone file for DNS Records: https://searchzone.ch/
+![CodeQL](https://github.com/pesc/searchzonech/workflows/CodeQL/badge.svg)
 
-## Infrastructure
-It's an elastic-based search engine ([AppSearch](https://www.elastic.co/app-search/) & [Elasticsearch](https://www.elastic.co/elasticsearch/)) running on Docker in the [Hetzner Cloud](https://www.hetzner.com/cloud).
+> Search the .ch zone file for DNS Records
+### 🏠 [Homepage](https://searchzone.ch)
+
+## Prerequisites
+
+- npm >=7.5.0
+- node >=15.8.0
+
+## Install
+
+```sh
+npm install
 ```
-                                         +---------------------------------------------+                            
-                                         |      Elastic & EnterpriseSearch Cluster     |                            
-                                         |                                             |                            
-                                         | +---------------------+                     |                            
-                                         | |                     |                     |                            
-+------------------------+               | |searchzone-elastic-01|                     |                            
-|      Loadbalancer      |---------------| |                     |                     |                            
-|                        |               | +---------------------+                     |                            
-|                        |               | +---------------------+                     |                            
-|    api.searchzone.ch   |---------------| |                     |                     |                            
-|                        |               | |searchzone-elastic-02|                     |                            
-|                        |               | |                     |                     |                            
-|                        |               | +---------------------+                     |                            
-|                        |---------------| +---------------------+                     |                            
-+------------------------+               | |                     |                     |                            
-                                         | |searchzone-elastic-03|                     |                            
-                                         | |                     |                     |                            
-                                         | +---------------------+                     |                            
-                                         |                                             |                            
-                                         |                                             |                            
-                                         |                                             |                            
-                                         +---------------------------------------------+       
-```
-### Updates and Deletion
-The newly added domains get indexed once a day. The deleted ones I only mark as removed (`VALID_DOMAIN = False`). So maybe you'll find a nice domain you wanted to buy with this flag.
-
-## Data Source
-The data I use is public available from [Switch.ch](https://www.switch.ch/de/open-data/#tab-c5442a19-67cf-11e8-9cf6-5254009dc73c-3) as part of their OpenData publication for combating cybercrime, scientific and social research or for other purposes in the public interest.
-
-## Next steps
-1. Release source code for indexing (Python)
-2. ~~Release source code for React App~~
-3. ~~Make Elastic more robust and faster~~
-4. Design, Design, Design,...
-5. Open API
-6. Open for changes (Some ideas: Better DNSSEC Overview, Notification for a deleted domain, ...)
 
 ## Usage
 
+```sh
+npm run start
+```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Run tests
 
-## License
-[Apache License 2.0](https://github.com/pesc/.ch-searchzone/blob/main/LICENSE)
+```sh
+npm run test
+```
+
+## Author
+
+👤 **Pascal Christen**
+
+* Website: https://pascalchristen.ch
+* Twitter: [@the_pesc](https://twitter.com/the_pesc)
+* Github: [@pesc](https://github.com/pesc)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/pesc/searchzonech/issues). 
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2021 [Pascal Christen](https://github.com/pesc).<br />
+This project is [Apache--2.0](https://www.apache.org/licenses/LICENSE-2.0) licensed.
