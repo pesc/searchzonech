@@ -7,10 +7,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Dns from '@material-ui/icons/Dns';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
-import { TextFields, VpnKey, VerifiedUser, AlternateEmail, Filter6, Filter4, Block, Lock, Security, VpnLock, InfoOutlined } from '@material-ui/icons';
+import { TextFields, VpnKey, VerifiedUser, AlternateEmail, Filter6, Filter4, Block, Lock, Security, VpnLock, InfoOutlined, Dns } from '@material-ui/icons';
 import Tooltip from '@material-ui/core/Tooltip';
 import { green, red } from '@material-ui/core/colors';
 
