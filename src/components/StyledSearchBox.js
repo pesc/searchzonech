@@ -43,7 +43,7 @@ export default function CustomizedInputBase() {
                     <SearchBox
                         inputView={({ getInputProps, getButtonProps }) => (
                             <>
-                                <InputBase autoFocus {...getInputProps({ placeholder: 'Search .ch zonefile' })} className={classes.customFullWidth}
+                                <InputBase {...getInputProps({ placeholder: 'Search .ch zonefile' })} className={classes.customFullWidth}
                                     endAdornment={
                                         <InputAdornment position="end">
                                             <IconButton {...getButtonProps()} type="submit" className={classes.iconButton} aria-label="search" >
