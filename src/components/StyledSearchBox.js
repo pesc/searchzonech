@@ -41,20 +41,18 @@ export default function CustomizedInputBase() {
             <Paper className={classes.paper}>
                 <FormControl className={classes.customFullWidth}>
                     <SearchBox
-                        inputView={({ getInputProps, getButtonProps }) => (
-                            <>
-                                <InputBase {...getInputProps({ placeholder: 'Search .ch zonefile' })} className={classes.customFullWidth}
+                        view={({ onChange, value, onSubmit }) => (
+                            <form onSubmit={onSubmit}>
+                                <InputBase value={value} onChange={e => onChange(e.currentTarget.value)} className={classes.customFullWidth}
                                     endAdornment={
                                         <InputAdornment position="end">
-                                            <IconButton {...getButtonProps()} type="submit" className={classes.iconButton} aria-label="search" >
+                                            <IconButton onSubmit={onSubmit} type="submit" className={classes.iconButton} aria-label="search" >
                                                 <SearchIcon />
                                             </IconButton>
-                                            {/* {getAutocomplete()} */}
                                         </InputAdornment>}
                                     
                                 />
-
-                            </>
+                            </form>
                         )}
                     />
                 </FormControl>

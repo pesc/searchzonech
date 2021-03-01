@@ -44,7 +44,7 @@ export default function HeaderBar() {
                         </Typography>
                         </Grid>
                         <Grid item xs={12} md={8}>
-                            <Hidden only={["md", "sm", "xs"]}>
+                            <Hidden only={["sm", "xs"]}>
                                 <Grid container
                                     direction="row"
                                     justify="flex-end"
@@ -71,7 +71,7 @@ export default function HeaderBar() {
                                     </Grid>
                                 </Grid>
                             </Hidden>
-                            <Hidden only={["xl", "lg"]}>
+                            <Hidden only={["xl", "lg", "md"]}>
                                 <Grid container
                                     direction="row"
                                     justify="flex-start"

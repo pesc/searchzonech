@@ -149,7 +149,6 @@ export default function Home() {
                                         <Grid className="dividerGrid" item md={1} lg={1} xl={1}>
                                             <Divider className="verticalDevider" orientation='vertical' />
                                         </Grid>
-                                        <Hidden only={['sm', 'xs']}>
                                             <Grid className="resultGrid" item xs={12} sm={12} md={6} lg={6} xl={8}>
                                                 <Grid container
                                                     direction="row"
@@ -167,23 +166,6 @@ export default function Home() {
                                                 <Grid>
                                                 </Grid>
                                             </Grid>
-                                        </Hidden>
-
-                                        <Hidden only={['md', 'lg', 'xl']}>
-                                            <Grid className="resultGrid" item xs={12} sm={12} md={6} lg={6} xl={8}>
-                                                <Grid item>
-                                                    {wasSearched && (
-                                                        <Results className={classes.ul} resultView={ResultView} />
-                                                    )}
-                                                </Grid>
-                                                <Grid itemclassName="pagingGrid" item>
-                                                    <Paging className="pagingSelect" view={PagingView} />
-                                                </Grid>
-                                            </Grid>
-                                            <Grid>
-                                            </Grid>
-                                        </Hidden>
-
                                     </Grid>
                                 </ErrorBoundary>
                             </div>
