@@ -43,7 +43,7 @@ export default function CustomizedInputBase() {
                     <SearchBox
                         view={({ onChange, value, onSubmit }) => (
                             <form onSubmit={onSubmit}>
-                                <InputBase value={value} onChange={e => onChange(e.currentTarget.value)} className={classes.customFullWidth}
+                                <InputBase placeholder="Search .ch zonefile" value={value} onChange={e => onChange(e.currentTarget.value)} className={classes.customFullWidth}
                                     endAdornment={
                                         <InputAdornment position="end">
                                             <IconButton onSubmit={onSubmit} type="submit" className={classes.iconButton} aria-label="search" >
