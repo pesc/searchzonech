@@ -19,6 +19,13 @@ export default function PagingView({
 }) {
     const classes = useStyles();
     return (
-        <Pagination color="primary" size="large" boundaryCount={1} className={classes.pagination} count={totalPages} page={current} onChange={(event, val) => onChange(val)} />
+        <Fragment>
+            <Hidden only={['md', 'sm', 'xs']}>
+                <Pagination color="primary" size="large" boundaryCount={1} className={classes.pagination} count={totalPages} page={current} onChange={(event, val) => onChange(val)} />
+            </Hidden>
+            <Hidden only={['lg', 'xl']}>
+                <Pagination color="primary" size="small" boundaryCount={1} className={classes.pagination} count={totalPages} page={current} onChange={(event, val) => onChange(val)} />
+            </Hidden>
+        </Fragment>
     );
 }
