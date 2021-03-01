@@ -160,8 +160,13 @@ export default function Home() {
                                                             <Results className={classes.ul} resultView={ResultView} />
                                                         )}
                                                     </Grid>
-                                                    <Grid itemclassName="pagingGrid" item>
+                                                    <Grid itemclassName="pagingGrid" item xs={12} sm={12} md={12} lg={12} xl={12}>
+                                                        <Grid container
+                                                            direction="row"
+                                                            justify="center"
+                                                            alignItems="center">
                                                         <Paging className="pagingSelect" view={PagingView} />
+                                                        </Grid>
                                                     </Grid>
                                                 </Grid>
                                                 <Grid>
@@ -176,8 +181,13 @@ export default function Home() {
                                                         <Results className={classes.ul} resultView={ResultView} />
                                                     )}
                                                 </Grid>
-                                                <Grid itemclassName="pagingGrid" item>
+                                                <Grid itemclassName="pagingGrid" item xs={12} sm={12} md={12} lg={12} xl={12}>
+                                                    <Grid container
+                                                        direction="row"
+                                                        justify="center"
+                                                        alignItems="center">
                                                     <Paging className="pagingSelect" view={PagingView} />
+                                                    </Grid>
                                                 </Grid>
                                             </Grid>
                                             <Grid>
