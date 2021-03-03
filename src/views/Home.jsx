@@ -122,48 +122,43 @@ export default function Home() {
                                             </Hidden>
                                         </Grid>
                                         <Grid className="navGrid" item xs={12} sm={12} md={4} lg={4} xl={3}>
-                                            <>
-                                                <PagingInfo
-                                                    className="pagingInfo"
-                                                    style={{
-                                                        display: 'flex',
-                                                        justifyContent: 'flex-end',
-                                                    }}
-                                                    view={StyledPagingInfo}
-                                                />
-                                                <Sorting
-                                                    className="sortingSelect"
-                                                    view={SortView}
-                                                    label={'Sort by'}
-                                                    sortOptions={buildSortOptionsFromConfig()}
-                                                />
-                                                {/* ToDo can be done much more elegant -> map key value */}
-                                                {getFacetFields().map((field, index) => (
-                                                    <div key={index}>
-                                                        <Accordion>
-                                                            <AccordionSummary
-                                                                expandIcon={<ExpandMoreIcon />}
-                                                                aria-controls="panel1a-content"
-                                                                id={index}
-                                                            >
-                                                                <Typography className={classes.heading}>{`${
-                                                                    getFacetFieldsNames()[index]
-                                                                } Filters`}</Typography>
-                                                            </AccordionSummary>
-                                                            <AccordionDetails>
-                                                                <Facet
-                                                                    className="facetSelect"
-                                                                    key={field}
-                                                                    view={FacetView}
-                                                                    field={field}
-                                                                    label={getFacetFieldsNames()[index]}
-                                                                    isFilterable={true}
-                                                                />
-                                                            </AccordionDetails>
-                                                        </Accordion>
-                                                    </div>
-                                                ))}
-                                            </>
+                                            <PagingInfo
+                                                className="pagingInfo"
+                                                style={{
+                                                    display: 'flex',
+                                                    justifyContent: 'flex-end',
+                                                }}
+                                                view={StyledPagingInfo}
+                                            />
+                                            <Sorting
+                                                className="sortingSelect"
+                                                view={SortView}
+                                                label={'Sort by'}
+                                                sortOptions={buildSortOptionsFromConfig()}
+                                            />
+                                            {getFacetFields().map((field, index) => (
+                                                <Accordion key={index}>
+                                                    <AccordionSummary
+                                                        expandIcon={<ExpandMoreIcon />}
+                                                        aria-controls="panel1a-content"
+                                                        id={index}
+                                                    >
+                                                        <Typography className={classes.heading}>{`${
+                                                            getFacetFieldsNames()[index]
+                                                        } Filters`}</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                        <Facet
+                                                            className="facetSelect"
+                                                            key={field}
+                                                            view={FacetView}
+                                                            field={field}
+                                                            label={getFacetFieldsNames()[index]}
+                                                            isFilterable={true}
+                                                        />
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                            ))}
                                         </Grid>
                                         <Grid className="dividerGrid" item md={1} lg={1} xl={1}>
                                             <Divider className="verticalDevider" orientation="vertical" />
