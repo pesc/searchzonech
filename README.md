@@ -14,12 +14,13 @@
 ![CodeQL](https://github.com/pesc/searchzonech/workflows/CodeQL/badge.svg)
 
 > Search the .ch zone file for DNS Records
+
 ### 🏠 [Homepage](https://searchzone.ch)
 
 ## Prerequisites
 
-- npm >=7.5.0
-- node >=15.8.0
+-   npm >=7.5.0
+-   node >=15.8.0
 
 ## Install
 
@@ -39,17 +40,21 @@ npm run start
 npm run test
 ```
 
+## Development
+
+Formatting: esbenp.prettier-vscode
+
 ## Author
 
 👤 **Pascal Christen**
 
-* Website: https://pascalchristen.ch
-* Twitter: [@the_pesc](https://twitter.com/the_pesc)
-* Github: [@pesc](https://github.com/pesc)
+-   Website: https://pascalchristen.ch
+-   Twitter: [@the_pesc](https://twitter.com/the_pesc)
+-   Github: [@pesc](https://github.com/pesc)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/pesc/searchzonech/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/pesc/searchzonech/issues).
 
 ## Show your support
 

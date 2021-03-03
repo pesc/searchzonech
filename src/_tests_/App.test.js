@@ -1,3 +1,3 @@
-it("Has no tests", () => {
-  expect(true).toBe(true);
-});
+it('Has no tests', () => {
+    expect(true).toBe(true)
+})
