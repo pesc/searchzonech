@@ -74,14 +74,18 @@ export default function ({ className, label, onMoreClick, onRemove, onSelect, op
                     {options.map((option) => {
                         const checked = option.selected
                         return (
-                            <StyledListItem divider button key={getFilterValueDisplay(option.value)}>
+                            <StyledListItem
+                                divider
+                                button
+                                key={getFilterValueDisplay(option.value)}
+                                onClick={() => (checked ? onRemove(option.value) : onSelect(option.value))}
+                            >
                                 <StyledListItemIcon>
                                     <Checkbox
                                         size="small"
                                         color="primary"
                                         id={`facet_${label}${getFilterValueDisplay(option.value)}`}
                                         checked={checked}
-                                        onChange={() => (checked ? onRemove(option.value) : onSelect(option.value))}
                                     />
                                 </StyledListItemIcon>
                                 <ListItemText multiline="true" secondary={getFilterValueDisplay(option.value)} />
