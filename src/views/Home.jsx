@@ -139,7 +139,7 @@ export default function Home() {
                                                 />
                                                 {/* ToDo can be done much more elegant -> map key value */}
                                                 {getFacetFields().map((field, index) => (
-                                                    <>
+                                                    <div key={index}>
                                                         <Accordion>
                                                             <AccordionSummary
                                                                 expandIcon={<ExpandMoreIcon />}
@@ -161,7 +161,7 @@ export default function Home() {
                                                                 />
                                                             </AccordionDetails>
                                                         </Accordion>
-                                                    </>
+                                                    </div>
                                                 ))}
                                             </>
                                         </Grid>
@@ -176,15 +176,7 @@ export default function Home() {
                                                             <Results className={classes.ul} resultView={ResultView} />
                                                         )}
                                                     </Grid>
-                                                    <Grid
-                                                        itemclassName="pagingGrid"
-                                                        item
-                                                        xs={12}
-                                                        sm={12}
-                                                        md={12}
-                                                        lg={12}
-                                                        xl={12}
-                                                    >
+                                                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                                                         <Grid
                                                             container
                                                             direction="row"
@@ -206,15 +198,7 @@ export default function Home() {
                                                         <Results className={classes.ul} resultView={ResultView} />
                                                     )}
                                                 </Grid>
-                                                <Grid
-                                                    itemclassName="pagingGrid"
-                                                    item
-                                                    xs={12}
-                                                    sm={12}
-                                                    md={12}
-                                                    lg={12}
-                                                    xl={12}
-                                                >
+                                                <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                                                     <Grid
                                                         container
                                                         direction="row"
