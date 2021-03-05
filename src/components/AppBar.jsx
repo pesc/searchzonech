@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Hidden from '@material-ui/core/Hidden'
-import { Favorite, GitHub, Info, DeveloperMode, Equalizer, Home } from '@material-ui/icons'
+import { Favorite, GitHub, Info, DeveloperMode, Equalizer } from '@material-ui/icons'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         flexGrow: 1,
+        textTransform: 'none',
     },
 }))
 
@@ -44,9 +45,6 @@ export default function HeaderBar() {
                             <Hidden only={['md', 'sm', 'xs']}>
                                 <Grid container direction="row" justify="flex-end" alignItems="center">
                                     <Grid item>
-                                        <IconButton onClick={() => navigate('/')} aria-label="Home" color="inherit">
-                                            <Home fontSize="small" />
-                                        </IconButton>
                                         <IconButton
                                             onClick={() => navigate('/statistic')}
                                             aria-label="Statistics"
@@ -86,9 +84,6 @@ export default function HeaderBar() {
                             <Hidden only={['xl', 'lg']}>
                                 <Grid container direction="row" justify="flex-start" alignItems="center">
                                     <Grid item>
-                                        <IconButton onClick={() => navigate('/')} aria-label="Home" color="inherit">
-                                            <Home fontSize="small" />
-                                        </IconButton>
                                         <IconButton
                                             onClick={() => navigate('/statistic')}
                                             aria-label="Statistics"

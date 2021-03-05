@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
+import Link from '@material-ui/core/Link'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -138,7 +139,9 @@ export default function ({ result }) {
                     <Grid container>
                         <Grid item xs={6}>
                             <Typography variant="h5" component="h2" color="primary">
-                                {fields.domain}
+                                <Link rel="noopener" href={'http://' + fields.domain} target="_blank">
+                                    {fields.domain}
+                                </Link>
                             </Typography>
                         </Grid>
                         <Grid item xs={6}>
