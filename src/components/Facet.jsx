@@ -38,9 +38,9 @@ const StyledCardHeader = withStyles({
 
 const StyledListItem = withStyles({
     root: {
-        padding: '0px',
         width: '100%',
         minWidth: '100%',
+        display: 'block',
     },
 })(ListItem)
 
