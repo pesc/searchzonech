@@ -39,6 +39,8 @@ const StyledCardHeader = withStyles({
 const StyledListItem = withStyles({
     root: {
         padding: '0px',
+        width: '100%',
+        minWidth: '100%',
     },
 })(ListItem)
 
@@ -50,11 +52,8 @@ export function getFilterValueDisplay(filterValue) {
 
 export default function ({ className, label, onMoreClick, onRemove, onSelect, options, showMore, onSearch }) {
     return (
-        <StyledCard>
-            <CardContent>
-                <StyledCardHeader
-                    title={
-                        <TextField
+        <>
+                        {/* <TextField
                             style={{
                                 display: 'flex',
                                 justifyContent: 'flex-end',
@@ -66,9 +65,8 @@ export default function ({ className, label, onMoreClick, onRemove, onSelect, op
                             onChange={(e) => {
                                 onSearch(e.target.value)
                             }}
-                        ></TextField>
-                    }
-                />
+                        ></TextField> */}
+                        
                 <List>
                     {options.length < 1 && <div>No matching options</div>}
                     {options.map((option) => {
@@ -101,17 +99,16 @@ export default function ({ className, label, onMoreClick, onRemove, onSelect, op
                         )
                     })}
                 </List>
-            </CardContent>
-            {showMore && (
-                <>
-                    <Divider />
-                    <CardActions>
-                        <Button color="primary" type="button" onClick={onMoreClick}>
-                            More
-                        </Button>
-                    </CardActions>
                 </>
-            )}
-        </StyledCard>
+            // {showMore && (
+            //     <>
+            //         <Divider />
+            //         <CardActions>
+            //             <Button color="primary" type="button" onClick={onMoreClick}>
+            //                 More
+            //             </Button>
+            //         </CardActions>
+            //     </>
+            // )}
     )
 }

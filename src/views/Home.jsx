@@ -21,7 +21,7 @@ import Hidden from '@material-ui/core/Hidden'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Divider from '@material-ui/core/Divider'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-
+import Filter from '../components/Filter'
 import SearchBoxMaterial from '../components/SearchBox'
 import ResultView from '../components/Result'
 import PagingView from '../components/Paging'
@@ -137,27 +137,8 @@ export default function Home() {
                                                 sortOptions={buildSortOptionsFromConfig()}
                                             />
                                             {getFacetFields().map((field, index) => (
-                                                <Accordion key={index}>
-                                                    <AccordionSummary
-                                                        expandIcon={<ExpandMoreIcon />}
-                                                        aria-controls="panel1a-content"
-                                                        id={index}
-                                                    >
-                                                        <Typography className={classes.heading}>{`${
-                                                            getFacetFieldsNames()[index]
-                                                        } Filters`}</Typography>
-                                                    </AccordionSummary>
-                                                    <AccordionDetails>
-                                                        <Facet
-                                                            className="facetSelect"
-                                                            key={field}
-                                                            view={FacetView}
-                                                            field={field}
-                                                            label={getFacetFieldsNames()[index]}
-                                                            isFilterable={true}
-                                                        />
-                                                    </AccordionDetails>
-                                                </Accordion>
+                                                <Filter index={index} field={field}>
+                                                </Filter>
                                             ))}
                                         </Grid>
                                         <Grid className="dividerGrid" item md={1} lg={1} xl={1}>
