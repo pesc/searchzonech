@@ -14,20 +14,18 @@ import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
 import AccordionActions from '@material-ui/core/AccordionActions'
+import TextField from '@material-ui/core/TextField'
 
 import { getFacetFieldsNames } from '../config/config-helper'
 
 const StyledList = withStyles({
     root: {
-        marginBottom: '10px',
-        paddingBottom: '5px',
         width: '100%',
     },
 })(List)
 
 const StyledListItemIcon = withStyles({
     root: {
-        minWidth: '0px',
         fontSize: '0.5rem',
     },
 })(ListItemIcon)
@@ -45,7 +43,7 @@ export function getFilterValueDisplay(filterValue) {
     return String(filterValue)
 }
 
-export default function ({ label, onMoreClick, onRemove, onSelect, options, showMore, index }) {
+export default function ({ label, onMoreClick, onRemove, onSelect, onSearch, options, showMore, index }) {
     return (
         <>
             <Accordion key={index}>
@@ -86,17 +84,30 @@ export default function ({ label, onMoreClick, onRemove, onSelect, options, show
                         })}
                     </StyledList>
                 </AccordionDetails>
-                {showMore && (
-                    <>
-                        <Divider />
 
-                        <AccordionActions>
+                <>
+
+                    <AccordionActions>
+                        <TextField
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'flex-end',
+                            }}
+                            size="small"
+                            id="standard-search"
+                            label={label + ' Filter'}
+                            type="search"
+                            onChange={(e) => {
+                                onSearch(e.target.value)
+                            }}
+                        ></TextField>
+                        {showMore && (
                             <Button color="primary" type="button" onClick={onMoreClick}>
                                 More
                             </Button>
-                        </AccordionActions>
-                    </>
-                )}
+                        )}
+                    </AccordionActions>
+                </>
             </Accordion>
         </>
     )
