@@ -12,16 +12,10 @@ import {
 } from '@elastic/react-search-ui'
 
 import { makeStyles } from '@material-ui/core/styles'
-import Accordion from '@material-ui/core/Accordion'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Hidden from '@material-ui/core/Hidden'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Divider from '@material-ui/core/Divider'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import Filter from '../components/Filter'
 import SearchBoxMaterial from '../components/SearchBox'
 import ResultView from '../components/Result'
 import PagingView from '../components/Paging'
@@ -137,8 +131,16 @@ export default function Home() {
                                                 sortOptions={buildSortOptionsFromConfig()}
                                             />
                                             {getFacetFields().map((field, index) => (
-                                                <Filter index={index} field={field}>
-                                                </Filter>
+                                                <Facet
+                                                    className="facetSelect"
+                                                    key={field}
+                                                    view={FacetView}
+                                                    field={field}
+                                                    label={getFacetFieldsNames()[index]}
+                                                    isFilterable={true}
+                                                    index={index}
+                                                    field={field}
+                                                />
                                             ))}
                                         </Grid>
                                         <Grid className="dividerGrid" item md={1} lg={1} xl={1}>
