@@ -86,13 +86,9 @@ export default function ({ label, onMoreClick, onRemove, onSelect, onSearch, opt
                 </AccordionDetails>
 
                 <>
-
+                    <Divider></Divider>
                     <AccordionActions>
                         <TextField
-                            style={{
-                                display: 'flex',
-                                justifyContent: 'flex-end',
-                            }}
                             size="small"
                             id="standard-search"
                             label={label + ' Filter'}
