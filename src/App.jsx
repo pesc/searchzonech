@@ -5,11 +5,10 @@ import API from './views/API'
 import Impress from './views/Impress'
 import Statistic from './views/Statistic'
 import HeaderBar from './components/AppBar'
-import MUICookieConsent from 'material-ui-cookie-consent'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
-const outerTheme = createMuiTheme({
+const outerTheme = createTheme({
     palette: {
         primary: {
             main: '#303F9F',
@@ -34,11 +33,6 @@ export default function App() {
                     <Route path="/api" element={<API />} />
                     <Route path="/impress" element={<Impress />} />
                 </Routes>
-                <MUICookieConsent
-                    cookieName="searchzoneCookieConsent"
-                    cookieValue="true"
-                    message="This website uses cookies to enhance the user experience."
-                />
             </ThemeProvider>
         </BrowserRouter>
     )
