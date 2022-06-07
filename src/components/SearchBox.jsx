@@ -42,6 +42,7 @@ export default function CustomizedInputBase() {
                                 <InputBase
                                     placeholder="Search .ch zonefile"
                                     value={value}
+                                    autoFocus
                                     onChange={(e) => onChange(e.currentTarget.value)}
                                     className={classes.customFullWidth}
                                     endAdornment={
